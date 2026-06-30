@@ -54,3 +54,8 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+      - name: Show deployed URL
+        run: |
+          echo "Deployed URL: ${{ steps.deployment.outputs.page_url }}"
+          echo "### GitHub Pages URL" >> $GITHUB_STEP_SUMMARY
+          echo "${{ steps.deployment.outputs.page_url }}" >> $GITHUB_STEP_SUMMARY
