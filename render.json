@@ -1,0 +1,16 @@
+{
+  "name": "planning-poker-server",
+  "env": "node",
+  "buildCommand": "cd server && npm install && npm run build",
+  "startCommand": "cd server && npm start",
+  "envVars": [
+    {
+      "key": "CORS_ORIGIN",
+      "value": "https://yourusername.github.io"
+    },
+    {
+      "key": "PORT",
+      "value": "10000"
+    }
+  ]
+}
